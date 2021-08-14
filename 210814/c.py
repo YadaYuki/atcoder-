@@ -15,8 +15,6 @@ def main(N,S,T):
       print(time_first_get[i])
   
 
-
-
 if __name__ == "__main__":
   N = int(input())
   S = list(map(int, input().split()))
