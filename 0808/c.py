@@ -31,14 +31,11 @@ def main_ans(H,W,N,AB):
     A_i,B_i = AB[i]
     A.append(A_i)
     B.append(B_i)
-  
   X_dict = {x:i+1 for i,x in enumerate(list(sorted(set(A))))} 
   Y_dict = {y:i+1 for i,y in enumerate(list(sorted(set(B))))} 
 
   for i in range(N):
     print(X_dict[A[i]],Y_dict[B[i]])
-
-
 
 
 if __name__ == "__main__":
