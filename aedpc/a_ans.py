@@ -11,7 +11,6 @@ for i in range(1,N+1):
   for j in range(max_point+1):
     if dp[i-1][j]:
       dp[i][j] = True
-    print(dp[i-1][j-p[i]])
     if j >= p[i] and dp[i-1][j-p[i]]:
       dp[i][j] = True
     
