@@ -23,6 +23,6 @@ for _ in range(Q):
             i, j = row[A], column[B]
             if is_transposition:
                 i, j = j, i
-            ans.append(N*(i)+(j))
+            ans.append(N*i+j)
 for i in range(len(ans)):
     print(ans[i])
