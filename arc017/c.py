@@ -18,7 +18,6 @@ def has_bit(n,i):
 
 dic = defaultdict(int)
 
-
 # 集合Bに対する重さを全列挙する.
 for n in range(1 << len(B)):
     s = 0
@@ -26,7 +25,6 @@ for n in range(1 << len(B)):
         if has_bit(n,i):
             s += B[i]
     dic[s] += 1
-
 
 ans = 0
 for n in range(1 << len(A)):
