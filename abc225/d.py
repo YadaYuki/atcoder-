@@ -26,7 +26,7 @@ for _ in range(Q):
         while item[0] != None:
             Q.appendleft(item[0] + 1)
             item = front_and_back[item[0]]
-        
+
         # append back
         item = front_and_back[x-1]
         while item[1] != None:
