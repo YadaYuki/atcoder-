@@ -14,5 +14,6 @@ for _ in range(Q):
             heapq.heappush(heap, X - reward_weight)
         else:
             reward_weight += X
+
 for i in range(len(ans)):
     print(ans[i])
