@@ -30,3 +30,4 @@ for i in range(P,Q+1):
 for i in range(len(ans)):
     print("".join(ans[i]))
 
+
