@@ -20,7 +20,7 @@ def dfs(town):
     visited[town] = True
     for i in range(visited_town_num[town],len(graph[town])):
         town_next_to = graph[town][i]
-        if not visited[town_next_to]:
+        if not visited[town_next_to] :
             visited_town_num[town] = i
             dfs(town_next_to)
     
