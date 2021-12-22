@@ -1,6 +1,8 @@
-
-abc206/d.py,2021-12-15
-abc232/c.py,2021-12-19
-arc131/c.py,2021-12-20
-arc130/a.py,2021-12-21
-arc130/b.py,2021-12-21
+problem,date,is_resolved
+abc206/d.py,2021-12-15,False
+abc232/c.py,2021-12-19,False
+arc131/c.py,2021-12-20,False
+arc130/a.py,2021-12-21,True
+arc130/b.py,2021-12-21,False
+arc130/a.py,2021-12-22,True
+arc130/a.py,2021-12-22,False
