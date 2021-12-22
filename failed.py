@@ -12,5 +12,5 @@ if __name__ == "__main__":
     DIR = dirname(__file__)
     PATH_TO_CSV = f'{DIR}/failed.csv'
     df = pd.read_csv(PATH_TO_CSV)
-    df = df.append({'problem': filename, 'date':datetime.date.today(),'is_resolved': False}, ignore_index=True)
+    df = df.append({'problem': filename, 'date':datetime.date.today(),'is_resolved': False,'resolved_at':None}, ignore_index=True)
     df.to_csv(PATH_TO_CSV, index=False)

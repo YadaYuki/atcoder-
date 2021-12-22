@@ -14,4 +14,5 @@ if __name__ == "__main__":
     PATH_TO_CSV = f'{DIR}/failed.csv'
     df = pd.read_csv(PATH_TO_CSV)
     df.loc[df['problem'] == problem,'is_resolved'] = True
+    df.loc[df['problem'] == problem,'resolved_at'] = datetime.date.today()
     df.to_csv(PATH_TO_CSV, index=False)
