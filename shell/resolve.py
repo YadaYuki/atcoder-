@@ -3,8 +3,10 @@ import sys
 import datetime
 from os.path import dirname
 import pandas as pd
-from .path import AC_ROOT
+from os.path import dirname,join
 
+DIR = dirname(__file__)
+AC_ROOT = join(DIR,'../')
 
 if __name__ == "__main__":
     args = sys.argv
