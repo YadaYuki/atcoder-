@@ -53,6 +53,7 @@ def convert_graph(graph,idx_arr):
 
 
 patterns = list(permutations([i for i in range(N)]))
+print(patterns)
 for P in patterns:
     takahashi_graph = convert_graph(takahashi_toy,P)
     if is_same_graph(takahashi_graph, aoki_toy):
