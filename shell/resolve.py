@@ -6,7 +6,7 @@ import pandas as pd
 from os.path import dirname,join
 
 DIR = dirname(__file__)
-AC_ROOT = join(DIR,'../')
+AC_ROOT = join(DIR,'..')
 
 if __name__ == "__main__":
     args = sys.argv
