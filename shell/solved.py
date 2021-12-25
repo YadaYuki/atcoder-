@@ -1,7 +1,7 @@
 import sys
 import datetime
 import pandas as pd
-from const  import PATH_TO_SOLVED_CSV,KEYWORDS
+from const  import PATH_TO_SOLVED_CSV
 
 
 if __name__ == "__main__":
@@ -10,18 +10,8 @@ if __name__ == "__main__":
     problem_name = args[2]
     problem = f'{branch_name}/{problem_name}'
 
-    keyword_idx = -1
-    keywords = []
-    while keyword_idx != 0:
-        print(f'0: No')
-        for i,keyword in enumerate(KEYWORDS):
-            print(f'{i+1}:{keyword}')
-        print("Input keyword idx:")
-        keyword_idx = int(input())
-        keywords.append(KEYWORDS[keyword_idx-1])
 
-    
 
     df = pd.read_csv(PATH_TO_SOLVED_CSV)
-    df = df.append({'problem': filename, 'solved_at':datetime.date.today(),'keyword':';'.join(keywords)}, ignore_index=True)
+    df = df.append({'problem': problem, 'solved_at':datetime.date.today()}, ignore_index=True)
     df.to_csv(PATH_TO_SOLVED_CSV, index=False)
