@@ -16,4 +16,4 @@ abc233/d2,2022-01-06,cumulative,True,2022-01-06
 abc229/d2,2022-01-06,cumulative;other,True,2022-01-06
 abc228/d2,2022-01-07,other,True,2022-01-07
 abc228/d2,2022-01-07,unionfind;other,True,2022-01-07
-abc227/d2,2022-01-07,,False,
+abc227/d2,2022-01-07,,True,2022-01-07
