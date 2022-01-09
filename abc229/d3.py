@@ -17,3 +17,5 @@ for i in range(len(dot_count)):
 
 print(ans)
 
+
+
