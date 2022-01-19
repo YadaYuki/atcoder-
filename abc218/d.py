@@ -15,5 +15,5 @@ for i in range(N-1):
         xj,yj = xy[j]
         if xi != xj and yi != yj:
             if (xi,yj) in pos_map and (xj,yi) in pos_map:
-                ans += 1
-print(ans//2)
+                ans += 1 # 残りの斜め2点が存在する場合は長方形が存在する
+print(ans//2) # 斜め線に関して,左右2回カウントしているため2で割る
