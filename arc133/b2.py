@@ -28,4 +28,3 @@ for i in range(N):
 
 
 print(bisect_left(z,10**9)) 
-# print(z)
