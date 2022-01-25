@@ -25,4 +25,4 @@ for i in range(N):
         idx_ls[bisect_left(idx_ls,j)] = j
 
 
-print(bisect_left(10**9))
+print(bisect_left(idx_ls,10**9))
