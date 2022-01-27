@@ -1,5 +1,6 @@
 
-
+import sys
+sys.setrecursionlimit(10**6)
 
 
 N = int(input())
@@ -14,17 +15,14 @@ visited = [False] * N
 
 ans = []
 def dfs(town:int):
-    # ここ？
     visited[town] = True
-    ans.append(town+1)
     for town_next_to in graph[town]:
         if not visited[town_next_to]:
-            
+            ans.append(town_next_to)
             dfs(town_next_to)
             ans.append(town+1)
 
 dfs(0)
 
-
-print(*ans)
+print("1",*ans)
 
