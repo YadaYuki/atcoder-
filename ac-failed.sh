@@ -1,3 +1,4 @@
 #!/bin/sh
 
-python failed.py $(git symbolic-ref --short HEAD) $1
+dir=$(dirname $(which $0))
+poetry run python $AC_ROOT/shell/failed.py $(git symbolic-ref --short HEAD) $1
