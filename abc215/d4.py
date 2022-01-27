@@ -8,18 +8,18 @@ checked_primes = [False] * (max(A)+1)
 def trial_division(N:int):
     prime_factorization = []
     prime = 2
-    while N % 2 != 0:
+    while N % 2 == 0:
         N //= 2
         prime_factorization.append(2)
     
     prime = 3
     while prime ** 2 <= N:
-        if N % f == 0:
+        if N % prime == 0:
             prime_factorization.append(prime)
             N //= prime
         else:
             prime += 2
-    if N != 1:
+    if N > 1:
         prime_factorization.append(N)
     return prime_factorization
 
