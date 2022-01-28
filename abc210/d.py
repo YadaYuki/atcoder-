@@ -10,7 +10,14 @@ cost_after_build_first_station = [[BIG for _ in range(W)] for _ in range(H)] # �
 
 for i in range(H):
     for j in range(W):
-        cost_after_build_first_station[i][j] = min(A[i][j],cost_after_build_first_station[i][j-1] + C,cost_after_build_first_station[i-1][j] + C)
+        if i == 0 and j == 0:
+            cost_after_build_first_station[i][j] = A[i][j]
+        elif i==0:
+            cost_after_build_first_station[i][j] = min(A[i][j],cost_after_build_first_station[i][j-1] + C)
+        elif j==0:
+            cost_after_build_first_station[i][j] = min(A[i][j],cost_after_build_first_station[i-1][j] + C)
+        else:
+            cost_after_build_second_station[i][j] = min(A[i][j],cost_after_build_first_station[i][j-1] + C,cost_after_build_first_station[i-1][j] + C)
 
 cost_after_build_second_station= [[BIG for _ in range(W)] for _ in range(H)] # 一つ目の駅を建設した後に、i,jにいるとき、それまでにかかる最小コスト
 
