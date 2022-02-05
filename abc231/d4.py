@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc231/submissions/28193680
 import sys
 sys.setrecursionlimit(10**6)
 N,M = map(int,input().split())
@@ -28,9 +29,10 @@ def dfs(prev,cur):
 visited = [False]*N
 
 for i in range(N):
-    if not visited[i]:
-        if dfs(-1,i):
-            print('No')
-            exit()
+    if len(graph[i]) >= 1:
+        if not visited[i]:
+            if dfs(-1,i):
+                print('No')
+                exit()
 
 print('Yes')
