@@ -11,6 +11,7 @@ for i in range(len(S)):
 
 i = 0
 ans = -1
+j = 0
 for i in range(len(dot_sum)):
     while j < len(dot_sum) and dot_sum[j] - dot_sum[i] <= K:
         j += 1
