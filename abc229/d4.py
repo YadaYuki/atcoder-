@@ -11,16 +11,9 @@ for i in range(len(S)):
 
 i = 0
 ans = -1
-while i < len(dot_sum):
-    j = i
-    dot_sum_i = dot_sum[i]
-    while True:
+for i in range(len(dot_sum)):
+    while j < len(dot_sum) and dot_sum[j] - dot_sum[i] <= K:
         j += 1
-        if j >= len(dot_sum):
-            break
-        if dot_sum[j] - dot_sum_i > K:
-            break
     ans = max(j-i-1, ans)
-    i = j
 
 print(ans)
