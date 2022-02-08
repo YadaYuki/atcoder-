@@ -17,3 +17,16 @@ abc229/d2,2022-01-06,cumulative;other,True,2022-01-06
 abc228/d2,2022-01-07,other,True,2022-01-07
 abc228/d2,2022-01-07,unionfind;other,True,2022-01-07
 abc227/d2,2022-01-07,,True,2022-01-07
+abc222/d3,2022-01-13,dp,True,2022-01-13
+abc221/d3,2022-01-13,other,True,2022-01-13
+abc235/e,2022-01-15,tree;bfs,False,
+abc215/d2,2022-01-22,math;other,False,
+arc133/a,2022-01-22,,False,
+arc133/b,2022-01-22,,False,
+abc236/d,2022-01-23,other,False,
+abc216/c2,2022-01-25,math,False,
+abc210/d2,2022-01-29,dp,False,
+arc134/b,2022-01-29,other,False,
+abc231/d4,2022-02-05,dfs,False,
+abc229/d4,2022-02-05,cumulative,False,
+abc228/d4,2022-02-08,unionfind,False,
