@@ -16,30 +16,3 @@ def dfs(n):
             return ans_d[n]
 
 print(dfs(X))
-
-
-# ans = 1
-# MOD = 998244353
-# for num in num_in_board:
-#     ans *= num
-#     ans %= MOD
-
-
-# if X < 5:
-#     print(X)
-#     exit()
-
-# # candidates = deque([X])
-# num_in_board = []
-
-
-# # 同じ問題
-# while len(candidates) > 0:
-#     num = candidates.popleft()
-#     xu = num // 2
-#     xd = num // 2 if num % 2 == 0 else num // 2 + 1
-#     for x in [xu, xd]:
-#         if x < 5:
-#             num_in_board.append(x)
-#         else:
-#             candidates.append(x)
