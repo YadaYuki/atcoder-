@@ -74,3 +74,4 @@ for i in range(H):
         ans = min(ans, cost_after_build_second_station[i][j])
 
 print(ans)
+3
