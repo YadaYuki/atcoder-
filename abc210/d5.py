@@ -12,8 +12,6 @@ for i in range(H):
         if i == 0 and j == 0:
             cost_after_build_first_station[i][j] = A[i][j]
         elif i == 0:
-            # print(A, cost_after_build_first_station)
-
             cost_after_build_first_station[i][j] = min(A[i][j], cost_after_build_first_station[i][j-1] + C)
             ans = min(ans, cost_after_build_first_station[i][j-1] + C + A[i][j])
         elif j == 0:
