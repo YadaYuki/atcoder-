@@ -111,7 +111,6 @@ class BinaryTrie:
                 self.id += 1 # 挿入された順番のみを記録
                 self.nodes[2*pt+y] = self.id
             self.cnt[pt] += 1
-            print(pt,self.nodes[2*pt+y],2*pt+y,y)
             pt = self.nodes[2*pt+y]           
         self.cnt[pt] += 1
  
