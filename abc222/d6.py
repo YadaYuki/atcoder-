@@ -3,14 +3,14 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
 max_b = max(b)
-R = [[0] * (max_b + 1) for _ in range(N + 1)]
+R = [[0 for _ in range(max_b+1)] for _ in range(N)]
 
 
 MOD = 998244353
 
-for i in range(1,max_b+1):
+for i in range(max_b+1):
     if a[0] <= i <= b[0]:
-        R[0][i] = R[0][i-1] + 1
+        R[0][i] = (R[0][i-1] + 1) % MOD
     else:
         R[0][i] = R[0][i-1]
 
