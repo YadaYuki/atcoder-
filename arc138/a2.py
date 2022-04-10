@@ -11,8 +11,6 @@ for i in range(K,N):
         possible = True
         break
 
-score = sum(A[:K])
-
 
 if not possible: # 目標は達成できない
     print(-1)
@@ -25,16 +23,20 @@ else:
     A_idxes.sort(key=cmp_to_key(cmp))
     BIG = 4 * 10 ** 5 + 1
     ans = BIG
-    i_candidate = -1
-    j_candidate = -1
-    ij_candidates = []
+    i_candidate = BIG
+    j_candidate = BIG
+    ij_candidates = [] # 交換する候補
     for i in range(N):
         a,idx = A_idxes[i]
-        if idx >= K:
-            if j_candidate != -1:
-                ans = min(ans,idx - j_candidate)
+        if idx < K:
+            if j_candidate != BIG:
+                if a != A[j_candidate]:
+                    ij_candidates.append([idx,j_candidate])
         else:
-            j_candidate = max(j_candidate,idx)
+            j_candidate = min(j_candidate,idx)
+    
+    for i,j in ij_candidates:
+        ans = min(ans,j-i)
     
     print(ans)
         
