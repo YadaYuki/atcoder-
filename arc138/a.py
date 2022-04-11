@@ -11,8 +11,6 @@ for i in range(K,N):
         possible = True
         break
 
-score = sum(A[:K])
-
 
 if not possible: # 目標は達成できない
     print(-1)
