@@ -17,8 +17,8 @@ for _ in range(Q):
         else:
             ans.append(stack.pop(0))
     else:
-        for i in stack:
-            heapq.heappush(heap, i)
+        for i in range(len(stack)):
+            heapq.heappush(heap, stack[i])
         stack = []
     # print(stack, heap)
 
