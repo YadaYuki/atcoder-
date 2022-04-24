@@ -27,12 +27,16 @@ class UnionFind:
 
 if __name__ == "__main__":
     N,M = map(int,input().split())
-    edges = [list(map(int,input().split())) for i in range(M)]
 
+
+    edges = []
+    ans = 0
+    for _ in range(M):
+        A,B,C = map(int, input().split())
+        ans += C
+        edges.append((A-1,B-1,C))
+    
     edges.sort(key=lambda x:x[2])
-
-    ans = sum([edges[i][2] for i in range(M)]) 
-
     uf = UnionFind(N+1)
 
     for edge in edges:
