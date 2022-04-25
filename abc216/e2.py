@@ -1,21 +1,21 @@
 N, K = map(int, input().split())
 A = list(map(int, input().split()))
  
-lb = -1
-ub = 2000000000
-while ub - lb > 1:
-    mid = (ub + lb) // 2
-    tot = 0
+ng = -1
+ok = 2000000000
+while ok - ng > 1:
+    mid = (ok + ng) // 2
+    total = 0
     for a in A:
         if a > mid:
-            tot += a - mid
-    if tot <= K:
-        ub = mid
+            total += a - mid
+    if total <= K:
+        ok = mid
     else:
-        lb = mid
+        ng = mid
  
-a_min = ub
- 
+a_min = ok
+
 ans = 0
 for a in A:
     if a > a_min:
