@@ -19,4 +19,3 @@ for i in arithmetics:
     if i >= X:
         print(i)
         break
-
