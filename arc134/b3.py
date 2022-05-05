@@ -31,6 +31,7 @@ for l in range(N):
         word_cnt[ascii_lowercase_to_idx(s[r])] -= 1
         if s[r] == exchange_char:
             s[l], s[r] = s[r], s[l]
+            r -= 1
             break
         r -= 1
 
