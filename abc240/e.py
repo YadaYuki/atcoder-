@@ -18,6 +18,8 @@ def dfs(p,n):
     for i in tree[n]:
       if i != p:
         dfs(n,i)
+        L[v] = min(L[v], L[nv])
+        R[v] = max(R[v], R[nv])
 
     r = tree[n][(len(tree[n])-1)]
     l = tree[n][0]
