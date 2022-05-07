@@ -35,7 +35,7 @@ def solve(N,W,items) -> int: #items: [(w,v,r),...]
 
     return ans
 
-N,W = map(int,input().split())
+N,W = map(int,input().split()) # N=20
 items = []
 for _ in range(N):
     w,v,r = map(int,input().split())
