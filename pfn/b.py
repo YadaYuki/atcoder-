@@ -10,7 +10,7 @@ def get_pattern_idx(bin_str):
             pattern_idxes.append(i)
     return pattern_idxes
 
-
+# 最短処理数を求める課題であるため、BFSにより実装を行った
 def solve(N,W,items) -> int: #items: [(w,v,r),...]
     X_sum_pattern = []
     for x_pattern in range(1 << N):
