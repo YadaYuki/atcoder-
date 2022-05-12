@@ -21,7 +21,6 @@ for i in range(A,B+1):
     can_win_takahashi = can_win_takahashi or can_win_takahashi_card
 
 
-
 if can_win_takahashi:
     print("Takahashi")
 else:
