@@ -1,11 +1,11 @@
-X = list(input())
+from collections import deque
+import itertools
+X = input()
+X = list(map(int, X))
 
-acc = [int(X[0])]
-
-for b in X[1:]:
-    acc.append(acc[-1] + int(b))
-
+acc = list(itertools.accumulate(X))
 acc.reverse()
+
 
 ans = ""
 MAX_ANS = 10 ** 6 
@@ -19,13 +19,13 @@ for i in range(len(X)):
 ans.reverse()
 
 is_zero = True
-output = ""
+output = []
 for i in ans:
     if i != 0 and is_zero:
         is_zero = False
-        output = output +  str(i)
+        output.append(i)
     elif is_zero == False:
-        output = output + str(i)
+        output.append(i)
     
 
-print(output)
+print("".join(map(str, output)))
