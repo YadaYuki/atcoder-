@@ -1,3 +1,5 @@
+import sys
+sys.setrecursionlimit(10**6)
 def dfs(parent,current):
     top_20th_score_of_children[current].append(X[current])
     for child in tree[current]:
