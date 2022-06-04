@@ -1,6 +1,0 @@
-0
-2 1 1000 5
-orange-juice milk-tea
-000001 orange-juice S 12:00:00
-000001 milk-tea M 12:01:00
-complete: 1
