@@ -1,26 +1,26 @@
 import heapq
+from collections import deque
 
 Q = int(input())
 
+queue=deque()
 heap = []
-stack = []
 ans = []
+
 for _ in range(Q):
     query = list(map(int, input().split()))
     q = query[0]
     if q == 1:
         q,x = query
-        stack.append(x)
+        queue.append(x)
     elif q == 2:
         if len(heap):
             ans.append(heapq.heappop(heap))
         else:
-            ans.append(stack.pop(0))
+            ans.append(queue.popleft())
     else:
-        for i in range(len(stack)):
-            heapq.heappush(heap, stack[i])
-        stack = []
-    # print(stack, heap)
+        while len(queue):
+            heapq.heappush(heap, queue.pop())
 
 
 for i in ans:
