@@ -2,9 +2,7 @@ N = int(input())
 s = input()
 S = list(s)
 x = []
-print(S)
 for i in range(N-2):
-    print("".join(S[i:i+3]))
     if "".join(S[i:i+3]) == "ARC":
         l,r = i,i+2
         while l - 1 >= 0 and S[l-1] == "A":
