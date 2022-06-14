@@ -12,6 +12,9 @@ arc128/a,2021-12-30,other,True,2021-12-30
 arc128/b,2021-12-30,math,False,
 arc127/a,2022-01-02,dfs;other,False,
 arc127/b,2022-01-02,other,False,
+<<<<<<< HEAD
+arc126/b,2022-01-03,other,False,
+=======
 abc233/d2,2022-01-06,cumulative,True,2022-01-06
 abc229/d2,2022-01-06,cumulative;other,True,2022-01-06
 abc228/d2,2022-01-07,other,True,2022-01-07
@@ -34,3 +37,4 @@ abc222/d5,2022-02-10,dp,False,
 abc217/d2,2022-02-11,tree;other,False,
 abc217/d,2022-02-12,tree,False,
 abc206/d3,2022-02-15,unionfind,False,
+>>>>>>> fe3eacaf430ee64847afa07dc0893cf65a60f24f
