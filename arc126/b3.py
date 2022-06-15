@@ -15,6 +15,7 @@ INF = 1 << 30
 
 dp = [INF] * (N+1)
 
+
 for a,b in AB:
     i = bisect_left(dp, b)
     dp[i] = b
