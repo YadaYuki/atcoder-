@@ -14,3 +14,13 @@ for q in range(1,N_sqrt+1):
     ans += p_num % MOD
     ans %= MOD
 print(ans)
+
+
+
+while right - left > 0.000000001:
+    mid_left = right/3+left*2/3
+    mid_right = right*2/3+left/3
+    if f(mid_left) >= f(mid_right):
+        left = mid_left
+    else:
+        right = mid_right
