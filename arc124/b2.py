@@ -23,3 +23,4 @@ ans.sort()
 print(len(ans))
 for i in ans:
     print(i)
+    
