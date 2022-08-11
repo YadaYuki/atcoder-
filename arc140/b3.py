@@ -1,8 +1,9 @@
 N = int(input())
 S = list(input())
 
-xs = []
 
+
+blocks = []
 for i in range(N-2):
     s = "".join(S[i:i+3])
     if s == "ARC":
@@ -17,6 +18,8 @@ for i in range(N-2):
 
             if l == -1 or r == N:
                 break
-        xs.append(diff)
+        blocks.append(diff)
 
-print(min(2*len(xs),sum(xs)))
+
+print(min(2*len(blocks),sum(blocks)))
+
