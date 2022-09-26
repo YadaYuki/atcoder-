@@ -1,5 +1,5 @@
 import math
-def list_primes(n:int):
+def list_primes(n):
     is_primes = [True] * (n + 1)
     is_primes[0] = is_primes[1] = False
     for i in range(2, n+1):

@@ -28,7 +28,7 @@ if __name__ == "__main__":
         # print(enum_div(i))
         enum_div_count = max(enum_div_count,len(enum_div(i)))
     
-    print(enum_div_count)
+    
     
     print(ans)
 

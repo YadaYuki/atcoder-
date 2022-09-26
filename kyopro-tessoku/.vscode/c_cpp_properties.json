@@ -1,0 +1,19 @@
+{
+    "env": {
+      "myDefaultIncludePath": ["${workspaceFolder}", "${workspaceFolder}/include"],
+      "myCompilerPath": "/usr/local/bin/g++-11",
+      "atcoderRoot":"${workspaceFolder}/../"
+    },
+    "configurations": [
+      {
+        "name": "Mac",
+        "macFrameworkPath": ["/System/Library/Frameworks"],
+        "includePath": ["${workspaceFolder}", "${atcoderRoot}/include"],
+        "browse": {
+          "path": ["${workspaceFolder}","${atcoderRoot}/include"]
+        }
+      }
+    ],
+    "version": 4 
+  }
+  
