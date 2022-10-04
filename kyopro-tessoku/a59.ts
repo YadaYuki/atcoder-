@@ -32,17 +32,18 @@ class SegmentTree {
       nodeIdx = Math.floor(nodeIdx / 2);
       const leftChildNodeIdx = nodeIdx * 2;
       const rightChildNodeIdx = nodeIdx * 2 + 1;
-      this.data[nodeIdx] = Math.max(
-        this.data[leftChildNodeIdx],
-        this.data[rightChildNodeIdx]
-      );
+      this.data[nodeIdx] =
+        this.data[leftChildNodeIdx] + this.data[rightChildNodeIdx];
     }
   }
 
   /*
    * return max value in [l,r)
    */
-  public rmq(l: number, r: number): number {
+  public rmq(
+    l: number, // min value of idx is 1.
+    r: number
+  ): number {
     const rmqRecursion = (
       l: number,
       r: number,
@@ -52,12 +53,12 @@ class SegmentTree {
     ): number => {
       const isOut = r <= currentL || currentR <= l;
       const isIn = l <= currentL && currentR <= r;
-      if (isOut) return -10000000000;
+      if (isOut) return 0;
       if (isIn) return this.data[nodeIdx];
       const mid = Math.floor((currentL + currentR) / 2); //
       const rmqInLeft = rmqRecursion(l, r, currentL, mid, nodeIdx * 2);
       const rmqInRight = rmqRecursion(l, r, mid, currentR, nodeIdx * 2 + 1);
-      return Math.max(rmqInLeft, rmqInRight);
+      return rmqInLeft + rmqInRight;
     };
     return rmqRecursion(l, r, 1, this.size2pow + 1, 1);
   }
