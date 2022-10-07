@@ -15,10 +15,6 @@ class SegmentTree {
     this.data = Array(this.size2pow * 2).fill(initialValue);
   }
 
-  public getSize(): number {
-    return this.size;
-  }
-
   public update(
     idx: number, // min value of idx is 1.
     value: number
@@ -61,6 +57,10 @@ class SegmentTree {
     };
     return rmqRecursion(l, r, 1, this.size2pow + 1, 1);
   }
+
+  public getCurArray(){
+    return this.data.slice(this.size2pow)
+  }
 }
 
 const main = () => {
@@ -78,6 +78,7 @@ const main = () => {
     const [N, Q] = lines[0].split(" ").map((val: string) => Number(val));
     const segTree = new SegmentTree(N);
     for (let i = 1; i <= Q; i++) {
+      console.log(segTree.getCurArray())
       const query = lines[i].split(" ").map((val: string) => Number(val));
       const q = query[0];
       switch (q) {
