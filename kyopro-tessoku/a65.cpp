@@ -4,6 +4,8 @@ using namespace std;
 vector<int> num_of_subordinates;
 vector<vector<int> > tree;
 
+// 一発で解けたの嬉しい〜〜〜！
+
 int calculate_num_of_subordinates(int p, int c)
 {
     auto is_root = (c == 0);
