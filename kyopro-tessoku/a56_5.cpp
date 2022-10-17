@@ -3,7 +3,7 @@ using namespace std;
 #define ll long long
 
 // vector<ll> Hash, Pow;
-ll MOD = 1e9+7;
+ll MOD = 1e9 + 7;
 
 ll char_2_num(char a)
 {
@@ -19,9 +19,7 @@ ll hash_i2j(ll i, ll j, ll Hash[], ll Pow[])
     auto word_cnt = j - i + 1;
     ll ans = (Hash[j] - Hash[i - 1] * Pow[word_cnt]) % MOD;
     if (ans < 0)
-    {
         ans += MOD;
-    }
     return ans;
 }
 
@@ -46,11 +44,11 @@ int main()
         Pow[i] = (Pow[i - 1] * redix % MOD);
     }
 
-    for (ll i = 0; i < N; i++)
-    {
-        cout << Hash[i] << " ";
-    }
-    cout << endl;
+    // for (ll i = 0; i < N; i++)
+    // {
+    //     cout << Hash[i] << " ";
+    // }
+    // cout << endl;
 
     for (ll i = 1; i <= Q; i++)
     {
@@ -62,7 +60,6 @@ int main()
         d--;
         auto hash_a2b = hash_i2j(a, b, Hash, Pow);
         auto hash_c2d = hash_i2j(c, d, Hash, Pow);
-        // cout << hash_a2b << "," << hash_c2d << endl;
         if (hash_a2b == hash_c2d)
         {
             cout << "Yes" << endl;
