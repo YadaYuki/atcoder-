@@ -15,7 +15,7 @@ int main()
     {
         Hash[i] = (Hash[i - 1] * L + S[i - 1]) % MOD;
     }
-
+long long Hash[N + 1]; // Hash[i] = Hash of S[0..i-1]
     long long Pow[N + 1]; // Pow[i] = L^i
     Pow[0] = 1;
     for (int i = 1; i <= N; i++)
