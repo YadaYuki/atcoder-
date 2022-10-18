@@ -8,6 +8,20 @@ private:
     int _size;
     vector<int> _data;
 
+    int dfs(int left, int right, int cur_left, int cur_right, int node_idx)
+    {
+        auto is_in = (left <= cur_left) && (cur_right <= right);
+        auto is_out = (cur_right <= left) || (right <= cur_left);
+        if (is_in)
+            return _data[node_idx];
+        if (is_out)
+            return MIN_VAL;
+        int mid = (cur_left + cur_right) / 2;
+        int left_max = dfs(left, right, cur_left, mid, node_idx * 2);
+        int right_max = dfs(left, right, mid, cur_right, node_idx * 2 + 1);
+        return max(left_max, right_max);
+    }
+
 public:
     explicit SegmentTree(int size)
     {
@@ -37,20 +51,6 @@ public:
     int rmq(int left, int right)
     {
         return dfs(left, right, 1, _size + 1, 1);
-    }
-
-    int dfs(int left, int right, int cur_left, int cur_right, int node_idx)
-    {
-        auto is_in = (left <= cur_left) && (cur_right <= right);
-        auto is_out = (cur_right <= left) || (right <= cur_left);
-        if (is_in)
-            return _data[node_idx];
-        if (is_out)
-            return MIN_VAL;
-        int mid = (cur_left + cur_right) / 2;
-        int left_max = dfs(left, right, cur_left, mid, node_idx * 2);
-        int right_max = dfs(left, right, mid, cur_right, node_idx * 2 + 1);
-        return max(left_max, right_max);
     }
 };
 
