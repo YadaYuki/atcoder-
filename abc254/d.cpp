@@ -54,7 +54,6 @@ int main()
         for (int j = 0; j < d[i].size(); j++)
             if (sq[d[i][j]])
                 f = d[i][j];
-        cout << i / f << endl;
         cnt[i / f]++;
     }
     int ans = 0;
