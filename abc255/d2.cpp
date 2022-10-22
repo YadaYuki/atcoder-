@@ -36,6 +36,16 @@ public:
         }
         data.assign(size * 2, 0);
     }
+
+    void print_data()
+    {
+        for (int i = size; i < size * 2; i++)
+        {
+            cout << data[i] << " ";
+        }
+        cout << endl;
+    }
+
     void update(ll pos, ll x)
     {
         data[pos + size - 1] = x;
