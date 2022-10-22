@@ -35,7 +35,7 @@ public:
         {
             _size *= 2;
         }
-        _tree_data.assign(_size, 0); // _tree_data[0] is ignored.
+        _tree_data.assign(_size*2, 0); // _tree_data[0] is ignored.
     }
 
     void update(ll pos, ll x)
@@ -72,18 +72,18 @@ int main()
     ll N, Q;
     cin >> N >> Q;
     vector<ll> A(N);
-    for (ll i = 0; i < N; i++)
+    for (int i = 0; i < N; i++)
     {
         cin >> A[i];
     }
     sort(A.begin(), A.end());
     auto st = SegmentTree(N);
-    for (ll i = 1; i <= N; i++)
+    for (int i = 1; i <= N; i++)
     {
         st.update(i, A[i - 1]);
     }
     // st.print_data();
-    for (ll i = 0; i < Q; i++)
+    for (int i = 0; i < Q; i++)
     {
         ll x;
         cin >> x;
