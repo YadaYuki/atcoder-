@@ -2,6 +2,8 @@
 #define ll long long
 using namespace std;
 
+/// @brief 
+/// @return 
 int main()
 {
     int N;
