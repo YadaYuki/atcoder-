@@ -24,10 +24,10 @@ int main()
 
                 for (int l = 0; l < i; l++)
                 {
-                    dp[j + 1][k][l] += dp[j][k][l];
+                    dp[j + 1][k][l] = (dp[j][k][l] + dp[j + 1][k][l]) % MOD;
                     if (k < i)
                     {
-                        dp[j + 1][k + 1][(l + a[j]) % i] += dp[j][k][l];
+                        dp[j + 1][k + 1][(l + a[j]) % i] = (dp[j][k][l] + dp[j + 1][k + 1][(l + a[j]) % i]) % MOD;
                     }
                 }
             }
