@@ -15,11 +15,11 @@ int main()
 
     vector<ll> under(N + 1); // under[i] ... iの下にあるカード
     under.assign(N + 1, -1);
-    
+
     vector<ll> piles(N + 1); // piles[i] ... iの下にあるカードの枚数 + 1
-    
-    vector<ll> ans(N+1);
-    ans.assign(N+1, -1);
+
+    vector<ll> ans(N + 1);
+    ans.assign(N + 1, -1);
 
     set<ll> s;
 
