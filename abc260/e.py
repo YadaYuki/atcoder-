@@ -12,10 +12,9 @@ for _ in range(N):
 
 r = Amax
 for l in range(1,Bmin+1):
-    imos[r-l+1] += 1
-    imos[M-l+2] -= 1
-
-    if pair[l] > 0:
+    imos[r-l+1] += 1 # r - l の長さに該当するやつを + する
+    imos[M-l+2] -= 1 
+    if pair[l] > 0: # lに対して、pairが存在するとき
         r = max(r,pair[l])
 
 for i in range(1,M+1):

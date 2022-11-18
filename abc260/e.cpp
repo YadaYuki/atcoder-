@@ -12,8 +12,6 @@ int main() {
     inv[A[i]].push_back(i);
     inv[B[i]].push_back(i);
   }
-
-  
   vector<int> cnt(N), ans(M + 3);
   int cnt_zero = N;
   for (int i = 1, j = 1; i <= M;) {
