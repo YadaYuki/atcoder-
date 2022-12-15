@@ -14,16 +14,17 @@ for i in range(M):
 def is_x_ok(x:int):
     queue = deque([])
     costs = [0 for i in range(N)]
+    erased = [False for i in range(N)]
     for i in range(N):
         for n in graph[i]:
             costs[i] += A[n]
         if x >= costs[i]:
             queue.append(i)
-    
-    erased = [False for i in range(N)]
+            erased[i] = True
+
+
     while len(queue) > 0:
         cur = queue.popleft()
-        erased[cur] = True
         
         # erase cur
         for n in graph[cur]:
@@ -32,6 +33,7 @@ def is_x_ok(x:int):
             costs[n] -= A[cur]
             if costs[n] <= x:
                 queue.append(n)
+                erased[n] = True
     
     ok = sum(erased) == len(erased)
 
