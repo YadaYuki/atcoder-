@@ -16,6 +16,10 @@ B_min = min(B)
 for l in range(1,B_min+1):
     f[r-l+1] += 1
     f[M-l+2] -= 1
+    # k = r-l ~ M-l まで.
+    # M-l以降は入らない.
+    # rをpairの最大値で更新していくのは何故か？
+    # : lのペアを入れないとSの条件を満たさないから.
     if pair[l] > 0:
         r = max(r,pair[l])
 
