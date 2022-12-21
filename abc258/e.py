@@ -23,7 +23,7 @@ for l in range(N):
 
     arrow[l] = r%N
     PotatoCnt[l] = r-l
-
+print(arrow,PotatoCnt)
 # ?
 x = 0
 idx = 1
@@ -40,7 +40,7 @@ while idx :
         break
 
     x = arrow[x]
-
+print(Rec)
 # 
 ans = []
 for k in query:
