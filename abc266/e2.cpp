@@ -21,5 +21,7 @@ int main()
         dp[i] /= 6.0;
     }
 
+    
+
     cout << dp[N-1] << endl;
 }
