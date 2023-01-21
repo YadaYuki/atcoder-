@@ -57,3 +57,22 @@ for i in range(Q):
     X.append(a.tail())
 
 print(*X)
+
+
+ "wave_notification"
+ "wave_mynews"
+ "wave_like_dislike"
+ "wave_topic_recommend"
+ "wave_rss"
+ "wave_video"
+ "wave_bookmark"
+ "wave_follow"
+ "product_ithink"
+ "product_vdata"
+ "read_morning_and_evening_edition"
+ "product_story"
+ "product_app"
+ "product_web"
+ "product_viewer"
+ "product_voicy"
+ "line_account"
